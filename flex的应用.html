@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>flex布局的应用</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			section{
+				margin-top: 50px;
+			}
+			ul,li{
+				list-style: none;
+			}
+			ul{
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				width:1200px;
+				margin: 0 auto;
+			}
+			li{
+				width: 200px;
+				height: 200px;
+				overflow: hidden;
+				border-radius: 10px;
+			}
+			li img{
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<ul>
+				<li>
+					<img src="images/dt05.png" />
+				</li>
+				<li>
+					<img src="images/dt05.png" />
+				</li>
+				<li>
+					<img src="images/dt05.png" />
+				</li>
+				<li>
+					<img src="images/dt05.png" />
+				</li>
+				<li>
+					<img src="images/dt05.png" />
+				</li>
+			</ul>
+		</section>
+	</body>
+</html>
