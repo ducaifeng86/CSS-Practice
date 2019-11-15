@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			section{
+				position: relative;
+				margin: 250px auto;
+				width:500px;
+			}
+			section>div{
+				position: absolute;
+				width:200px;
+				height: 150px;
+				text-align: center;
+				color: #fff;
+				background-color: rgba(225, 88, 135,0.9);
+			}
+			#box1{
+				
+			}
+			#box2{
+				background-color: rgba(225, 88, 135,0.5);
+				transform: translateX(300px) scale(1,0.5);
+			}
+			#box3{
+				background-color: rgba(225, 88, 135,0.3);
+				transform: translateX(-300px) scale(1.5,1.5);
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div id="box1">原来的位置</div>
+			<div id="box2">translateX(300px) scale(1,0.5)</div>
+			<div id="box3">translateX(-300px) scale(1.5,1.5)</div>
+		</section>
+	</body>
+</html>

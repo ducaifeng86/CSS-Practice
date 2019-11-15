@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>absolute的应用——轮播图片布局上的小圆点</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			section{
+				position: relative;
+				margin: 50px auto;
+				width: 500px;
+				height: 280px;
+				overflow: hidden;
+			}
+			ul,li{
+				list-style: none;
+			}
+			.wrap-img{
+				width: 9999px;
+				height: 280px;
+			}
+			.wrap-img li{
+				float: left;
+				width: 500px;
+				height: 280px;
+			}
+			.wrap-img li img{
+				width:100%;
+				height: auto;
+			}
+			.wrap-dot{
+				position: absolute;
+				bottom: 40px;
+				left:50%;
+				right:50%;
+				margin-right: -50px;
+				margin-left: -50px;
+				display: flex;
+				justify-content:space-between;
+				width:100px;
+			}
+			.wrap-dot li{
+				float: left;
+				width:16px;
+				height: 16px;
+				border-radius: 50%;
+				background-color: #fff;
+				cursor: pointer;
+			}
+			.wrap-dot li.active{
+				background-color:#9ee39e;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section>
+			<ul class="wrap-img">
+				<li>
+					<img src="images/1.jpg"/>
+				</li>
+				<li>
+					<img src="images/2.jpg"/>
+				</li>
+				<li>
+					<img src="images/3.jpg"/>
+				</li>
+				<li>
+					<img src="images/4.jpg"/>
+				</li>
+			</ul>
+			<ul class="wrap-dot">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</section>
+	</body>
+
+</html>

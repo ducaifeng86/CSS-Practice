@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>animation、@keyframes实现轮播</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			section{
+				position: relative;
+				margin: 50px auto;
+				width: 500px;
+				height: 280px;
+				overflow: hidden;
+			}
+			ul,li{
+				list-style: none;
+			}
+			.wrap-img{
+				width: 9999px;
+				height: 280px;
+				animation: switch 8s ease-out infinite;
+			}
+			.wrap-img li{
+				float: left;
+				width: 500px;
+				height: 280px;
+			}
+			.wrap-img li img{
+				width:100%;
+				height: auto;
+			}
+			@keyframes switch {
+				0%, 15% {
+					margin-left: 0;
+				}
+				25%, 40% {
+					margin-left: -500px;
+				}
+				50%, 65% {
+					margin-left: -1000px;
+				}
+				75%, 100% {
+					margin-left: -1500px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<section>
+			<ul class="wrap-img">
+				<li>
+					<img src="images/1.jpg"/>
+				</li>
+				<li>
+					<img src="images/2.jpg"/>
+				</li>
+				<li>
+					<img src="images/3.jpg"/>
+				</li>
+				<li>
+					<img src="images/4.jpg"/>
+				</li>
+			</ul>
+		</section>
+	</body>
+
+</html>

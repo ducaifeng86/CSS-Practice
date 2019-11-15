@@ -14,25 +14,27 @@
 				margin: 50px auto;
 				width: 500px;
 				height: 280px;
-				background-color: gainsboro;
+				overflow: hidden;
 			}
 			ul,li{
 				list-style: none;
 			}
 			.wrap-img{
-				width:100%;
+				width: 9999px;
 				height: 280px;
-				overflow: hidden;
+				animation: switch 8s ease-out infinite;
 			}
 			.wrap-img li{
 				float: left;
+				width: 500px;
+				height: 280px;
 			}
 			.wrap-img li img{
 				width:100%;
 				height: auto;
 			}
 			.wrap-dot{
-				position: absolute;//绝对定位
+				position: absolute;
 				bottom: 40px;
 				left:50%;
 				right:50%;
@@ -52,6 +54,20 @@
 			}
 			.wrap-dot li.active{
 				background-color:#9ee39e;
+			}
+			@keyframes switch {
+				0%, 15% {
+					margin-left: 0;
+				}
+				25%, 40% {
+					margin-left: -500px;
+				}
+				50%, 65% {
+					margin-left: -1000px;
+				}
+				75%, 100% {
+					margin-left: -1500px;
+				}
 			}
 		</style>
 	</head>
